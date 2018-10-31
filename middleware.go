@@ -65,6 +65,10 @@ func (l Logger) SetOutput(w io.Writer) {
 	logrus.SetOutput(w)
 }
 
+func (l Logger) SetHeader(h string) {
+	// TODO. See comments for Prefix() function
+}
+
 func (l Logger) Printj(j log.JSON) {
 	logrus.WithFields(logrus.Fields(j)).Print()
 }
